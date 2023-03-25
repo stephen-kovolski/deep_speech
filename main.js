@@ -1,8 +1,6 @@
-//Below is required.  These 3 lines are feeding the right objects to chrome
+//Below is required.  This is feeding the right objects to chrome
 const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
-const SpeechRecognitionEvent =
-  window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+
 
 
 //Below is creating a new instance of the speech recognition. 
