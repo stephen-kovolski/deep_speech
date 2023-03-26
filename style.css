@@ -34,3 +34,12 @@ section p{
     margin: 0 auto;
     justify-content: center;
 }
+.texts p{
+    color: black;
+    text-align: left;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px
+}
