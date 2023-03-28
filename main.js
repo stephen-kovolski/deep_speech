@@ -1,58 +1,24 @@
-// const texts = document.querySelector('.texts');
+const texts = document.querySelector(".texts");
 
 
 // //Below is required.  This is feeding the right objects to chrome
-// window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+window.SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
 
 
 
 // //Below is creating a new instance of the speech recognition. 
 // //we use the SpeechRecognition constructor and create a new instance.
-// const recognition = new window.SpeechRecognition();
+const recognition = new SpeechRecognition();
 
 // //THe below line allows the program to print speech as the user says it.  
 // //If it was set to false, the program would wait until we finished talking to print everything we said.
-// recognition.interimResults = true;
+recognition.interimResults = true;
 
 
 // //if you have certain grammer restrictions, you could put them here.
 // /*******const speechRecognitionList = new SpeechGrammarList();*********/
 
-
-// let p = document.createElement('p');
-
-// recognition.addEventListener('result', (e) => {
-
-//     const text = Array.from(e.results)
-//     .map(result => result[0])
-//     .map(result => result.transcript)
-//     .join("");
-
-//     p.innerText = text;
-//     texts.appendChild(p);
-
-//     if(e.results[0].isFinal){
-        
-//         p = document.createElement('p')
-//     }
-
-//     console.log(text)
-// })
-
-// recognition.addEventListener('end', ()=>{
-//     recognition.start();
-// })
-
-// recognition.start();
-
-
-const texts = document.querySelector(".texts");
-
-window.SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition;
-
-const recognition = new SpeechRecognition();
-recognition.interimResults = true;
 
 let p = document.createElement("p");
 
