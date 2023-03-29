@@ -11,7 +11,7 @@ window.SpeechRecognition =
 // //we use the SpeechRecognition constructor and create a new instance.
 const recognition = new SpeechRecognition();
 
-// //THe below line allows the program to print speech as the user says it.  
+// //The below line allows the program to print speech as the user says it.  
 // //If it was set to false, the program would wait until we finished talking to print everything we said.
 recognition.interimResults = true;
 
@@ -32,16 +32,16 @@ recognition.addEventListener("result", (e) => {
   p.innerText = text;
   texts.appendChild(p)
 
-  if(e.results[0].isFinal){
+  if(e.results[0].isFinal == true){
     p=document.createElement('p');
   }
   
-    p = document.createElement("p");
   
 });
 
 recognition.addEventListener("end", () => {
   recognition.start();
+
 });
 
 recognition.start();
