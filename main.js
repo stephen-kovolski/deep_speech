@@ -10,6 +10,7 @@ window.SpeechRecognition =
 // //Below is creating a new instance of the speech recognition. 
 // //we use the SpeechRecognition constructor and create a new instance.
 const recognition = new SpeechRecognition();
+recognition.continuous = true;
 
 // //The below line allows the program to print speech as the user says it.  
 // //If it was set to false, the program would wait until we finished talking to print everything we said.
@@ -30,19 +31,16 @@ recognition.addEventListener("result", (e) => {
     .join("");
 
   p.innerText = text;
-  texts.appendChild(p)
+  texts.appendChild(p);
 
-  if(e.results[0].isFinal == true){
-    p=document.createElement('p');
+  if (text.includes('safe word')){
+    recognition.continuous = false;
   }
-  
-  
-});
 
-recognition.addEventListener("end", () => {
-  recognition.start();
+}); 
 
-});
+// recognition.addEventListener("end", () => {
+//   recognition.start();
 
 recognition.start();
 
