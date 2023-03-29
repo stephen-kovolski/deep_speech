@@ -33,9 +33,10 @@ recognition.addEventListener("result", (e) => {
   p.innerText = text;
   texts.appendChild(p);
 
-  if (text.includes('safe word')){
-    recognition.continuous = false;
-  }
+  // if (text.includes('safe word)){  or (text == 'safe word')
+  //   recognition.abort();
+  //   console.log("Speech recognition aborted.");
+  // }
 
 }); 
 
