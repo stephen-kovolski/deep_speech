@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "deepl": "^1.0.13",
     "deepspeech": "^0.9.3"
   }
 }
