@@ -46,11 +46,7 @@ recognition.addEventListener("result", (e) => {
 recognition.start();
 
 
-module.exports = {
-  text: texts,
-  sourceLang: 'EN',
-  targetLang: 'SP'
-};
+
 
 
 
