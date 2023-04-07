@@ -45,6 +45,8 @@ recognition.addEventListener("result", (e) => {
 
 recognition.start();
 
+//session stays open
+
 
 
 
